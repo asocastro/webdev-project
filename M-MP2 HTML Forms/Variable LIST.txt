@@ -1,1 +1,7 @@
 Enter variable name and ID here:
+name - ID
+
+PERSONAL INFORMATION:
+surname - surname
+middle_name - middle_name
+given_name - given_name

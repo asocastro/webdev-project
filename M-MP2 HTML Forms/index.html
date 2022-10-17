@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <div class="main">
@@ -22,52 +24,82 @@
             <div class="container">
                 <div class="signup-content">
                     <form method="POST" id="signup-form" class="signup-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="first_name">First name</label>
-                                <input type="text" class="form-input" name="first_name" id="first_name" />
-                            </div>
-                            <div class="form-group">
-                                <label for="last_name">Last name</label>
-                                <input type="text" class="form-input" name="last_name" id="last_name" />
-                            </div>
+                        <div class="" form-row>
+                            <h1>PERSONAL INFORMATION</h1>
                         </div>
                         <div class="form-row">
-                            <div class="form-group form-icon">
-                                <label for="birth_date">Birth date</label>
-                                <input type="text" class="form-input" name="birth_date" id="birth_date" placeholder="MM-DD-YYYY" />
+                            <div class="form-group">
+                                <label for="surname">Surname</label>
+                                <input type="text" class="form-input" name="surname" id="surname" required />
                             </div>
-                            <div class="form-radio">
-                                <label for="gender">Gender</label>
-                                <div class="form-flex">
-                                    <input type="radio" name="gender" value="male" id="male" checked="checked" />
-                                    <label for="male">Male</label>
-    
-                                    <input type="radio" name="gender" value="female" id="female" />
-                                    <label for="female">Female</label>
-                                </div>
+                            <div class="form-group">
+                                <label for="middle_name">Middle Name</label>
+                                <input type="text" class="form-input" name="middle_name" id="middle_name" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="phone_number">Phone number</label>
-                            <input type="number" class="form-input" name="phone_number" id="phone_number" />
+                            <label for="given_name">Given Name</label>
+                            <input type="text" class="form-input" name="given_name" id="given_name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="stud_id">Student ID</label>
+                            <input type="number" class="form-input" name="stud_id" id="stud_id" required />
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-input" name="password" id="password"/>
+                                <label for="year_level">Year Level</label>
+                                <div class="select-list">
+                                    <select name="year_level" id="year_level" required>
+                                        <option value="year_1">1st Year</option>
+                                        <option value="year_2">2nd Year</option>
+                                        <option value="year_3">3rd Year</option>
+                                        <option value="year_4">4th Year</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="re_password">Repeat your password</label>
-                                <input type="password" class="form-input" name="re_password" id="re_password"/>
+                                <label for="program">Program</label>
+                                <div class="select-list">
+                                    <select name="program" id="program" required>
+                                        <option value="cpe">BS Computer Engineering</option>
+                                        <option value="naa">Others</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <h1>MEMBERSHIP TYPE</h1>
+                        </div>
+                        <div class="form-radio">
+                            <label for="membership_type">Type</label>
+                            <div class="form-flex">
+                                <input type="radio" name="membership_type" value="new" id="new" checked="checked" />
+                                <label for="new">New</label>
+
+                                <input type="radio" name="membership_type" value="renewal" id="renewal" />
+                                <label for="renewal">Renewal</label>
+
+                                <input type="radio" name="membership_type" value="honorary" id="honorary" />
+                                <label for="honorary">Honorary</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="payment_proof">Proof of Payment</label>
+                            <form action="/action_page.php">
+                                <input type="file" id="myFile" name="filename">
+                            </form>
+                        </div>
+
+
+
+
+
                         <div class="form-text">
                             <a href="#" class="add-info-link"><i class="zmdi zmdi-chevron-right"></i>Additional info</a>
                             <div class="add_info">
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-input" name="email" id="email"/>
+                                    <input type="email" class="form-input" name="email" id="email" />
                                 </div>
                                 <div class="form-group">
                                     <label for="country">Country</label>
@@ -79,20 +111,10 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="city">City</label>
-                                    <div class="select-list">
-                                        <select name="city" id="city" required>
-                                            <option value="NY">NewYork</option>
-                                            <option value="IC">IceLand</option>
-                                            <option value="canada">Canada</option>
-                                        </select>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="submit" name="submit" id="submit" class="form-submit" value="Submit"/>
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Submit" />
                         </div>
                     </form>
                 </div>
@@ -108,4 +130,5 @@
     <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
     <script src="js/main.js"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
 </html>

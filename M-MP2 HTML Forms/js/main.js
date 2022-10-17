@@ -10,42 +10,42 @@
         $('.add_info').toggle( "slow" );
     });
 
-    $('#country').parent().append('<ul class="list-item" id="newcountry" name="country"></ul>');
-    $('#country option').each(function(){
-        $('#newcountry').append('<li value="' + $(this).val() + '">'+$(this).text()+'</li>');
+    $('#program').parent().append('<ul class="list-item" id="newprogram" name="program"></ul>');
+    $('#program option').each(function(){
+        $('#newprogram').append('<li value="' + $(this).val() + '">'+$(this).text()+'</li>');
     });
-    $('#country').remove();
-    $('#newcountry').attr('id', 'country');
-    $('#country li').first().addClass('init');
-    $("#country").on("click", ".init", function() {
-        $(this).closest("#country").children('li:not(.init)').toggle();
-    });
-
-    $('#city').parent().append('<ul class="list-item" id="newcity" name="city"></ul>');
-    $('#city option').each(function(){
-        $('#newcity').append('<li value="' + $(this).val() + '">'+$(this).text()+'</li>');
-    });
-    $('#city').remove();
-    $('#newcity').attr('id', 'city');
-    $('#city li').first().addClass('init');
-    $("#city").on("click", ".init", function() {
-        $(this).closest("#city").children('li:not(.init)').toggle();
+    $('#program').remove();
+    $('#newprogram').attr('id', 'program');
+    $('#program li').first().addClass('init');
+    $("#program").on("click", ".init", function() {
+        $(this).closest("#program").children('li:not(.init)').toggle();
     });
 
-    var allOptions = $("#country").children('li:not(.init)');
-    $("#country").on("click", "li:not(.init)", function() {
+    $('#year_level').parent().append('<ul class="list-item" id="newyear_level" name="year_level"></ul>');
+    $('#year_level option').each(function(){
+        $('#newyear_level').append('<li value="' + $(this).val() + '">'+$(this).text()+'</li>');
+    });
+    $('#year_level').remove();
+    $('#newyear_level').attr('id', 'year_level');
+    $('#year_level li').first().addClass('init');
+    $("#year_level").on("click", ".init", function() {
+        $(this).closest("#year_level").children('li:not(.init)').toggle();
+    });
+
+    var allOptions = $("#program").children('li:not(.init)');
+    $("#program").on("click", "li:not(.init)", function() {
         allOptions.removeClass('selected');
         $(this).addClass('selected');
-        $("#country").children('.init').html($(this).html());
-        allOptions.toggle('slow');
+        $("#program").children('.init').html($(this).html());
+        allOptions.toggle('fast');
     });
 
-    var FoodOptions = $("#city").children('li:not(.init)');
-    $("#city").on("click", "li:not(.init)", function() {
+    var FoodOptions = $("#year_level").children('li:not(.init)');
+    $("#year_level").on("click", "li:not(.init)", function() {
         FoodOptions.removeClass('selected');
         $(this).addClass('selected');
-        $("#city").children('.init').html($(this).html());
-        FoodOptions.toggle('slow');
+        $("#year_level").children('.init').html($(this).html());
+        FoodOptions.toggle('fast');
     });
 
     $('#signup-form').validate({
