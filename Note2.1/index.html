@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>FormWizard_v1</title>
+  <title>SCpES Registration Form</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="colorlib.com">
 
@@ -24,7 +24,7 @@
       <section>
         <div class="inner">
           <div class="image-holder">
-            <img src="images/form-wizard-1.jpg" alt="">
+            <img src="images/cpe1.svg" alt="">
           </div>
           <div class="form-content">
             <div class="form-header">
@@ -59,8 +59,7 @@
                 </div>
                 <ul class="dropdown">
                   <li rel="BSCPE">BS Computer Engineering</li>
-                  <li rel="BSIT">BS Information Technology</li>
-                  <li rel="BSCS">BS Computer Science</li>
+                  <li rel="BSCS">Other Programs</li>
                 </ul>
               </div>
               <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
@@ -103,7 +102,7 @@
       <section>
         <div class="inner">
           <div class="image-holder">
-            <img src="images/form-wizard-2.jpg" alt="">
+            <img src="images/cpe2.svg" alt="">
           </div>
           <div class="form-content">
             <div class="form-header">
@@ -127,7 +126,7 @@
               </div>
             </div>
             <div class="form-holder">
-              <input type="text" placeholder="Provincial Address (Optional lang)" class="form-control">
+              <input type="text" placeholder="Provincial Address (Optional)" class="form-control">
             </div>
       </section>
 
@@ -136,7 +135,7 @@
       <section>
         <div class="inner">
           <div class="image-holder">
-            <img src="images/form-wizard-3.jpg" alt="">
+            <img src="images/cpe3.svg" alt="">
           </div>
           <div class="form-content">
             <div class="form-header">
@@ -155,12 +154,6 @@
               <div class="form-holder"><br>
                 <input type="text" placeholder="Twitter Username" class="form-control">
               </div>
-
-            </div>
-            <div class="checkbox-circle mt-24">
-              <input type="checkbox" checked> Please accept <a href="#">terms and conditions ?</a>
-              <span class="checkmark"></span>
-              </label>
             </div>
           </div>
         </div>
@@ -171,7 +164,7 @@
         style="display: none;">
         <div class="inner">
           <div class="image-holder">
-            <img src="images/form-wizard-2.jpg" alt="">
+            <img src="images/cpe4.svg" alt="">
           </div>
           <div class="form-content">
             <div class="form-header">
@@ -196,7 +189,7 @@
               </div>
             </div>
             <div class="form-holder">
-              <input type="text" placeholder="Provincial Address (Optional lang)" class="form-control">
+              <input type="text" placeholder="Provincial Address (Optional)" class="form-control">
             </div>
           </div>
         </div>
@@ -208,7 +201,7 @@
         style="display: none;">
         <div class="inner">
           <div class="image-holder">
-            <img src="images/form-wizard-2.jpg" alt="">
+            <img src="images/cpe5.svg" alt="">
           </div>
           <div class="form-content">
             <div class="form-header">
@@ -218,7 +211,6 @@
             <div class="form-row">
               <div class="form-holder">
                 <label id="Membeship_type"><b>Type:</b></label>
-                <br>
                 <br>
 
                 <label class="Type">
@@ -235,10 +227,16 @@
                   <input type="radio" name="Type" value="3rd"><b> Honorary </b> <br>
                   <span class=" checkmark"></span>
                 </label>
+                
                 <label class="Type"><br>
                   <label><b>Proof of Payment</b></label>
                   <br>
                   <input type="file" name="Type" value="proof">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-circle mt-24">
+                  <input type="checkbox" checked>I accept <a href="#">terms & conditions</a>
                   <span class="checkmark"></span>
                 </label>
 
@@ -252,7 +250,6 @@
   </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
-
   <script src="js/jquery.steps.js"></script>
   <script src="js/main.js"></script>
   <script src="js/new.js"></script>
@@ -263,7 +260,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'UA-23581568-13');
   </script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
@@ -271,6 +267,4 @@
     data-cf-beacon='{"rayId":"75cf88bcebc1bc58","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.10.3","si":100}'
     crossorigin="anonymous"></script>
 </body>
-
-
 </html>
