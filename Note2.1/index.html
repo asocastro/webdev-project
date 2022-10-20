@@ -20,6 +20,7 @@
     <form action="#" id="wizard">
 
       <h2></h2>
+      <!--TAB1-->
       <section>
         <div class="inner">
           <div class="image-holder">
@@ -97,7 +98,7 @@
           </div>
         </div>
       </section>
-
+      <!--TAB2-->
       <h2></h2>
       <section>
         <div class="inner">
@@ -111,7 +112,7 @@
             <p>Contact Information</p>
             <div class="form-row">
               <div class="form-holder">
-                <input id="UE" type="text" placeholder="UE Email" class="form-control" onkeydown="Validation_UEemail()">
+                <input type="text" placeholder="UE Email" class="form-control">
               </div>
               <div class="form-holder">
                 <input type="text" placeholder="Personal Email" class="form-control">
@@ -131,6 +132,7 @@
       </section>
 
       <h2></h2>
+      <!--TAB3-->
       <section>
         <div class="inner">
           <div class="image-holder">
@@ -153,10 +155,6 @@
               <div class="form-holder"><br>
                 <input type="text" placeholder="Twitter Username" class="form-control">
               </div>
-              <div class="form-holder">
-                <label style="font-size: 0.75rem;"> In Case of Emergency</label>
-                <input type="text" placeholder="Full Name" class="form-control">
-              </div>
 
             </div>
             <div class="checkbox-circle mt-24">
@@ -167,7 +165,90 @@
           </div>
         </div>
       </section>
+      <!--TAB4-->
+      <h2 id="wizard-h-4" tabindex="-1" class="title"></h2>
+      <section id="wizard-p-1" role="tabpanel" aria-labelledby="wizard-h-1" class="body" aria-hidden="true"
+        style="display: none;">
+        <div class="inner">
+          <div class="image-holder">
+            <img src="images/form-wizard-2.jpg" alt="">
+          </div>
+          <div class="form-content">
+            <div class="form-header">
+              <h3>Registration</h3>
+            </div>
+            <p>In Case of Emergency</p>
+            <div class="form-row">
+              <div class="form-holder">
+                <input id="FullName" type="text" placeholder="Full Name" class="form-control"
+                  onkeyup="Validation_UEemail()">
+              </div>
+              <div class="form-holder">
+                <input type="text" placeholder="Relationship" class="form-control">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-holder">
+                <input type="text" placeholder="Contact Number" class="form-control">
+              </div>
+              <div class="form-holder">
+                <input type="text" placeholder="Home Address" class="form-control">
+              </div>
+            </div>
+            <div class="form-holder">
+              <input type="text" placeholder="Provincial Address (Optional lang)" class="form-control">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--TAB5-->
+      <h2 id="wizard-h-4" tabindex="-1" class="title"></h2>
+      <section id="wizard-p-1" role="tabpanel" aria-labelledby="wizard-h-1" class="body" aria-hidden="true"
+        style="display: none;">
+        <div class="inner">
+          <div class="image-holder">
+            <img src="images/form-wizard-2.jpg" alt="">
+          </div>
+          <div class="form-content">
+            <div class="form-header">
+              <h3>Registration</h3>
+            </div>
+            <p>Membership Type</p>
+            <div class="form-row">
+              <div class="form-holder">
+                <label id="Membeship_type"><b>Type:</b></label>
+                <br>
+                <br>
+
+                <label class="Type">
+                  <input type="radio" name="Type" value="1st" checked> <b> New </b> <br>
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="Type">
+                  <input type="radio" name="Type" value="2nd"> <b> Renewal </b> <br>
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="Type">
+                  <input type="radio" name="Type" value="3rd"><b> Honorary </b> <br>
+                  <span class=" checkmark"></span>
+                </label>
+                <label class="Type"><br>
+                  <label><b>Proof of Payment</b></label>
+                  <br>
+                  <input type="file" name="Type" value="proof">
+                  <span class="checkmark"></span>
+                </label>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </form>
+
   </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
