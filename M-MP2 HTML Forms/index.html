@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SCpES Registration Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="colorlib.com">
+
+  <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="robots" content="noindex, follow">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <form action="#" id="wizard">
+
+      <h2></h2>
+      <!--TAB1-->
+      <section>
+        <div class="inner">
+          <div class="image-holder">
+            <img src="images/cpe1.svg" alt="">
+          </div>
+          <div class="form-content">
+            <div class="form-header">
+              <h3>Registration</h3>
+            </div>
+            <p>Personal Information</p>
+            <div class="form-row">
+              <div class="form-holder">
+                <input id="Surname" type="text" placeholder="Surname" class="form-control"
+                  onkeydown="return /[a-z]/i.test(event.key)" required />
+              </div>
+              <div class="form-holder">
+                <input id="Given_Name" type="text" placeholder="Given Name" class="form-control"
+                  onkeydown="return /[a-z]/i.test(event.key)" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-holder">
+                <input id="Middle_Name" type="text" placeholder="Middle Name (Optional)" class="form-control"
+                  onkeydown="return /[a-z]/i.test(event.key)" placeholder="(Optional)" required>
+              </div>
+              <div class="form-holder">
+                <input id="Std_Num" type="text" placeholder="Student Number" class="form-control"
+                  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==11) return false;" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="select">
+                <div class="form-holder">
+                  <div class="select-control">Program</div>
+                  <i class="zmdi zmdi-caret-down"></i>
+                </div>
+                <ul class="dropdown">
+                  <li rel="BSCPE">BS Computer Engineering</li>
+                  <li rel="BSCS">Other Programs</li>
+                </ul>
+              </div>
+              <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+                <div class="checkbox-tick">
+                  <label id="Current_yr"><b>Current Year Level</b></label>
+                  <br>
+                  <br>
+                  <label style="margin-left: 15px ;" class="Year">
+                    <input type="radio" name="Year" value="1st" checked> 1<br>
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="Year">
+                    <input type="radio" name="Year" value="2nd"> 2<br>
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="Year">
+                    <input type="radio" name="Year" value="3rd"> 3<br>
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="Year">
+                    <input type="radio" name="Year" value="4th"> 4<br>
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <!--
+<div class="checkbox-circle">
+<label>
+<input type="checkbox" checked> Nor again is there anyone who loves or pursues or desires to obtaini.
+<span class="checkmark"></span>
+</label>
+</div>
+-->
+          </div>
+        </div>
+      </section>
+      <!--TAB2-->
+      <h2></h2>
+      <section>
+        <div class="inner">
+          <div class="image-holder">
+            <img src="images/cpe2.svg" alt="">
+          </div>
+          <div class="form-content">
+            <div class="form-header">
+              <h3>Registration</h3>
+            </div>
+            <p>Contact Information</p>
+            <div class="form-row">
+              <div class="form-holder">
+                <input type="text" placeholder="UE Email" class="form-control">
+              </div>
+              <div class="form-holder">
+                <input type="text" placeholder="Personal Email" class="form-control">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-holder">
+                <input type="text" placeholder="Contact Number" class="form-control">
+              </div>
+              <div class="form-holder">
+                <input type="text" placeholder="Home Address" class="form-control">
+              </div>
+            </div>
+            <div class="form-holder">
+              <input type="text" placeholder="Provincial Address (Optional)" class="form-control">
+            </div>
+      </section>
+
+      <h2></h2>
+      <!--TAB3-->
+      <section>
+        <div class="inner">
+          <div class="image-holder">
+            <img src="images/cpe3.svg" alt="">
+          </div>
+          <div class="form-content">
+            <div class="form-header">
+              <h3>Registration</h3>
+            </div>
+            <p>Social Media Accounts</p>
+            <div class="form-row">
+              <div class="form-holder">
+                <input type="text" placeholder="Facebook Username" class="form-control">
+              </div>
+              <div class="form-holder">
+                <input type="text" placeholder="Instagram Username" class="form-control">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-holder"><br>
+                <input type="text" placeholder="Twitter Username" class="form-control">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--TAB4-->
+      <h2 id="wizard-h-4" tabindex="-1" class="title"></h2>
+      <section id="wizard-p-1" role="tabpanel" aria-labelledby="wizard-h-1" class="body" aria-hidden="true"
+        style="display: none;">
+        <div class="inner">
+          <div class="image-holder">
+            <img src="images/cpe4.svg" alt="">
+          </div>
+          <div class="form-content">
+            <div class="form-header">
+              <h3>Registration</h3>
+            </div>
+            <p>In Case of Emergency</p>
+            <div class="form-row">
+              <div class="form-holder">
+                <input id="FullName" type="text" placeholder="Full Name" class="form-control"
+                  onkeyup="Validation_UEemail()">
+              </div>
+              <div class="form-holder">
+                <input type="text" placeholder="Relationship" class="form-control">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-holder">
+                <input type="text" placeholder="Contact Number" class="form-control">
+              </div>
+              <div class="form-holder">
+                <input type="text" placeholder="Home Address" class="form-control">
+              </div>
+            </div>
+            <div class="form-holder">
+              <input type="text" placeholder="Provincial Address (Optional)" class="form-control">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--TAB5-->
+      <h2 id="wizard-h-4" tabindex="-1" class="title"></h2>
+      <section id="wizard-p-1" role="tabpanel" aria-labelledby="wizard-h-1" class="body" aria-hidden="true"
+        style="display: none;">
+        <div class="inner">
+          <div class="image-holder">
+            <img src="images/cpe5.svg" alt="">
+          </div>
+          <div class="form-content">
+            <div class="form-header">
+              <h3>Registration</h3>
+            </div>
+            <p>Membership Type</p>
+            <div class="form-row">
+              <div class="form-holder">
+                <label id="Membeship_type"><b>Type:</b></label>
+                <br>
+
+                <label class="Type">
+                  <input type="radio" name="Type" value="1st" checked> <b> New </b> <br>
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="Type">
+                  <input type="radio" name="Type" value="2nd"> <b> Renewal </b> <br>
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="Type">
+                  <input type="radio" name="Type" value="3rd"><b> Honorary </b> <br>
+                  <span class=" checkmark"></span>
+                </label>
+                
+                <label class="Type"><br>
+                  <label><b>Proof of Payment</b></label>
+                  <br>
+                  <input type="file" name="Type" value="proof">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-circle mt-24">
+                  <input type="checkbox" checked>I accept <a href="#">terms & conditions</a>
+                  <span class="checkmark"></span>
+                </label>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.steps.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/new.js"></script>
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-23581568-13');
+  </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+    integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+    data-cf-beacon='{"rayId":"75cf88bcebc1bc58","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.10.3","si":100}'
+    crossorigin="anonymous"></script>
+</body>
+</html>
