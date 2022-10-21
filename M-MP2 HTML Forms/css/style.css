@@ -102,7 +102,7 @@ img {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #e9e0cf;
+    background: #eeecf8;
     margin-right: 78px;
     position: relative
 }
@@ -111,7 +111,7 @@ img {
     content: "";
     width: 58px;
     height: 2px;
-    background: #e9e0cf;
+    background: #eeecf8;
     position: absolute;
     right: 22px;
     top: 5px
@@ -121,7 +121,7 @@ img {
     content: "";
     width: 0;
     height: 2px;
-    background: #6d7f52;
+    background: #453e79;
     position: absolute;
     left: -68px;
     top: 5px;
@@ -129,11 +129,11 @@ img {
 }
 
 .wizard>.steps li.first a {
-    background: #6d7f52
+    background: #453e79
 }
 
 .wizard>.steps li.checked a {
-    background: #6d7f52
+    background: #453e79
 }
 
 .wizard>.steps li.checked a:after {
@@ -198,7 +198,7 @@ h3 {
 p {
     font-family: muli-semibold;
     font-size: 20px;
-    color: #6d7f52;
+    color: #453e79;
     text-align: center;
     margin-bottom: 26px
 }
@@ -286,7 +286,7 @@ p {
 }
 
 .form-control:focus {
-    border-color: #e9e0cf
+    border-color: #eeecf8
 }
 
 .form-control::-webkit-input-placeholder {
@@ -338,7 +338,7 @@ textarea.form-control {
     height: 41px;
     width: 135px;
     align-items: center;
-    background: #e9e0cf;
+    background: #eeecf8;
     font-family: muli-semibold;
     color: #666;
     cursor: pointer;
@@ -355,7 +355,7 @@ textarea.form-control {
 }
 
 .actions li a:hover {
-    background: #cfc7b8
+    background: #eeecf8;
 }
 
 .actions li:first-child a {
@@ -378,12 +378,12 @@ textarea.form-control {
 
 .actions li:last-child a {
     width: 124px;
-    background: #6d7f52;
+    background: #453e79;
     color: #fff
 }
 
 .actions li:last-child a:hover {
-    background: #849963
+    background: #453e79
 }
 
 .actions li:last-child a:before {
@@ -400,12 +400,12 @@ textarea.form-control {
 }
 
 .actions li[aria-disabled=false]~li a {
-    background: #6d7f52;
+    background: #453e79;
     color: #fff
 }
 
 .actions li[aria-disabled=false]~li a:hover {
-    background: #849963
+    background: #453e79
 }
 
 .checkbox-tick label {
@@ -474,11 +474,11 @@ textarea.form-control {
 }
 
 .checkbox-circle label a {
-    color: #6d7f52
+    color: #4979fb
 }
 
 .checkbox-circle label a:hover {
-    color: #89b843
+    color: #3479ba
 }
 
 .checkbox-circle input {
