@@ -588,3 +588,27 @@ textarea.form-control {
 
     margin-left: -5px;
 }
+
+.Files {
+    margin-left: 220px;
+    margin-top: -75px;
+    text-align: justify;
+    position: absolute;
+
+}
+
+.types {
+
+    margin-left: 25px;
+}
+
+.type2 {
+    margin-top: 15px;
+    margin-left: 40px;
+}
+
+.conditions {
+
+    margin-top: 50px;
+
+}
