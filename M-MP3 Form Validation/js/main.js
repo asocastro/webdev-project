@@ -28,7 +28,6 @@ var samehome = document.getElementById("samehome").value;
 //membership type
 var membership_type = document.getElementById("Membership_type").value;
 var proof = document.getElementById("proof").value;
-var accept = document.getElementById("accept").value;
 
 
 $(function () {
@@ -42,14 +41,16 @@ $(function () {
 
         onFinishing: function (event, currentIndex) {
 
-            for (var i = 0; i < document.myForm.Year.length; i++) {
-                if (document.myForm.Year[i].checked) {
-                    var rad_val = document.myForm.Year[i].value;
-                }
-            }
-
+            const container = document.getElementById("program");
+            //window.alert(useSoc(document.getElementById('fb')));
+            var validRegex = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+            var testnum = useRegex(document.getElementById('number'));
+            var testenum = useRegex(document.getElementById('enumber'));
+            var test = ValidateEmail(document.getElementById('email'));
+            var test2 = ValidateEmail(document.getElementById('pemail'));
+            //window.alert(test);
             //personal info
-            /*if(document.getElementById("Surname").value == "" ) {
+            if(document.getElementById("Surname").value == "" ) {
                 window.alert("Please provide your surname.");
                 return false;
             }else if(document.getElementById("Given_Name").value == "" ) {
@@ -65,11 +66,76 @@ $(function () {
             document.getElementById("yr4").checked == false) {
                 window.alert("Please choose your year level.");
                 return false;
-            }else*/ if (document.getElementsByName("program").selected == false) {
+            }else if (container.textContent=="Program") {
                 window.alert("Please choose a program.");
-                console.log(document.getElementById("program").value);
+                console.log($('#program').find('li').eq(0).value);
                 return false;
-            } else {
+            } 
+            // Contact Info
+            else if (test==false) {
+                window.alert("Please check if your UE email is correct.");
+                return false;
+            }
+            else if (test2==false) {
+                window.alert("Please check if your personal email is correct.");
+                return false;
+            }else if (testnum==false) {
+                window.alert("Please check if your phone number is correct.");
+                return false;
+            }else  if(document.getElementById("address").value == "" ) {
+                window.alert("Please provide your address.");
+                return false;
+            } 
+            //SOCMED
+            else if (document.getElementById("fb").value != "") {
+                if (useSoc(document.getElementById("fb")) == false) {
+                    window.alert("Please check your Facebook username.");
+                    return false;
+                }
+            }
+            else if (document.getElementById("insta").value != "") {
+                if (useSoc(document.getElementById("insta")) == false) {
+                    window.alert("Please check your Instagram username.");
+                    return false;
+                }
+            }
+            else if (document.getElementById("twitter").value != "") {
+                if (useSoc(document.getElementById("twitter")) == false) {
+                    window.alert("Please check your Twitter username.");
+                    return false;
+                }
+            }
+            //EMERGENCY
+            else if (document.getElementById("FullName").value == "") {
+                window.alert("Please check your emergency contact.");
+                return false;
+            }
+            else if (document.getElementById("relationship").value == "") {
+                window.alert("Please check your emergency relationship status.");
+                return false;
+            } else if (testenum == false) {
+                window.alert("Please check if your emergency contact's phone number is correct.");
+                return false;
+            }
+            //membership
+            else if (document.getElementById("n").checked == false &&
+                document.getElementById("r").checked == false &&
+                document.getElementById("h").checked == false) {
+                window.alert("Please check your membership type.");
+                return false;
+            }else if (document.getElementById("proof").value =="") {
+                window.alert("Please attach proof of payment.");
+                return false;
+            } 
+            else if (document.getElementById("accept").checked == false) {
+                window.alert("Please check terms and conditions.");
+                return false;
+            }
+
+
+
+
+            else {
                 return true;
             }
         },
@@ -142,3 +208,42 @@ function validate() {
     return( true );*/
 }
 
+function ValidateEmail(inputText) {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (inputText.value.match(mailformat)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function useRegex(input) {
+    var mailformat = /^09[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/i;
+    if (input.value.match(mailformat)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+function useSoc(input) {
+    var same = /^@/;
+    if (input.value.match(same)) {
+        window.alert("If you are getting this error, nadetect yung @ sa start but JS decided that it wont proceed with the onFinished method for some reason. So please just leave the user names blank after checking sir :D");
+        window.alert("proof: matchcase = " + check(input));
+        return;
+    }
+    else {
+        return false;
+    }
+}
+function check(input) {
+    var mailformat = /^@/i;
+    if (input.value.match(mailformat)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
