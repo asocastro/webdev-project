@@ -1,3 +1,5 @@
+
+
 $(function () {
     $("#wizard").steps({
         headerTag: "h2",
@@ -9,23 +11,27 @@ $(function () {
             finish: "Submit",
             next: "Next",
             previous: "Previous"
+        },
+        finish: function(){
+            alert("test")
+        
         }
+        
     });
+    
     $('.wizard > .steps li a').click(function () {
         $(this).parent().addClass('checked');
         $(this).parent().prevAll().addClass('checked');
         $(this).parent().nextAll().removeClass('checked');
     });
-    /*$('.Next').click(function () {
+    $('.Next').click(function () {
         $("#wizard").steps('next');
-    })*/
-    $('.Previous').click(function () { 
-        $("#wizard").steps('previous'); 
+    })
+    $('.Previous').click(function () {
+        $("#wizard").steps('previous');
     })
     $('.Submit').click(function () {
         $("#wizard").steps('finish');
-        alert("test");
-        
     })
     $('html').click(function () {
         $('.select .dropdown').hide();
@@ -39,10 +45,12 @@ $(function () {
     $('.select .dropdown li').click(function () {
         $(this).parent().toggle(); var text = $(this).attr('rel'); $(this).parent().prev().find('div').text(text);
     })
-
-
-
+    $('.Submit').click(function(){ 
+        window.alert("test"); 
+        return false; 
+    });
 })
+
 
 
 //Personal info

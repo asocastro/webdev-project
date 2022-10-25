@@ -1,4 +1,4 @@
-/*
+
 var UE_Email = document.getElementById('UE').value;
 var valid = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
@@ -14,4 +14,3 @@ function Validation_UEemail() {
     }
 
 }
-*/
