@@ -16,9 +16,9 @@ $(function () {
         $(this).parent().prevAll().addClass('checked');
         $(this).parent().nextAll().removeClass('checked');
     });
-    $('.Next').click(function () {
+    /*$('.Next').click(function () {
         $("#wizard").steps('next');
-    })
+    })*/
     $('.Previous').click(function () { 
         $("#wizard").steps('previous'); 
     })
