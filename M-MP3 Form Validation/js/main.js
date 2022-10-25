@@ -7,7 +7,7 @@ $(function () {
         transitionEffectSpeed: 500,
         labels: {
             finish: "Submit",
-            next: "   Next",
+            next: "Next",
             previous: "Previous"
         }
     });
@@ -19,13 +19,28 @@ $(function () {
     $('.Next').click(function () {
         $("#wizard").steps('next');
     })
-    $('.Previous').click(function () { $("#wizard").steps('Previous'); })
-    $('html').click(function () { $('.select .dropdown').hide(); }); $('.select').click(function (event) { event.stopPropagation(); }); $('.select .select-control').click(function () { $(this).parent().next().toggle(); })
-    $('.select .dropdown li').click(function () { $(this).parent().toggle(); var text = $(this).attr('rel'); $(this).parent().prev().find('div').text(text); })
-    
-    $('.finish').click(function () {
-        alert("test");
+    $('.Previous').click(function () { 
+        $("#wizard").steps('previous'); 
     })
+    $('.Submit').click(function () {
+        $("#wizard").steps('finish');
+        alert("test");
+        
+    })
+    $('html').click(function () {
+        $('.select .dropdown').hide();
+    });
+    $('.select').click(function (event) {
+        event.stopPropagation();
+    });
+    $('.select .select-control').click(function () {
+        $(this).parent().next().toggle();
+    })
+    $('.select .dropdown li').click(function () {
+        $(this).parent().toggle(); var text = $(this).attr('rel'); $(this).parent().prev().find('div').text(text);
+    })
+
+
 
 })
 
