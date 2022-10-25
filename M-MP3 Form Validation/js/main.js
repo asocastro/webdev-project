@@ -1,30 +1,32 @@
 $(function () {
-    $("#wizard").steps({ 
-        headerTag: "h2", 
+    $("#wizard").steps({
+        headerTag: "h2",
         bodyTag: "section",
-        transitionEffect: "fade", 
-        enableAllSteps: true, 
-        transitionEffectSpeed: 500, 
+        transitionEffect: "fade",
+        enableAllSteps: true,
+        transitionEffectSpeed: 500,
         labels: {
-             finish: "Submit", 
-             next: "   Next", 
-             previous: "Previous" 
-            } 
-        }); 
+            finish: "Submit",
+            next: "   Next",
+            previous: "Previous"
+        }
+    });
     $('.wizard > .steps li a').click(function () {
-             $(this).parent().addClass('checked'); 
-             $(this).parent().prevAll().addClass('checked'); 
-             $(this).parent().nextAll().removeClass('checked'); 
-            }); 
+        $(this).parent().addClass('checked');
+        $(this).parent().prevAll().addClass('checked');
+        $(this).parent().nextAll().removeClass('checked');
+    });
     $('.Next').click(function () {
-         $("#wizard").steps('next'); 
+        $("#wizard").steps('next');
     })
     $('.Previous').click(function () { $("#wizard").steps('Previous'); })
     $('html').click(function () { $('.select .dropdown').hide(); }); $('.select').click(function (event) { event.stopPropagation(); }); $('.select .select-control').click(function () { $(this).parent().next().toggle(); })
     $('.select .dropdown li').click(function () { $(this).parent().toggle(); var text = $(this).attr('rel'); $(this).parent().prev().find('div').text(text); })
-    $('wz_finish').click(function(){
+    
+    $('.finish').click(function () {
         alert("test");
     })
+
 })
 
 
