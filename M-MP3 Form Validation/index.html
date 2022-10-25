@@ -57,9 +57,9 @@
                   <div class="select-control">Program</div>
                   <i class="zmdi zmdi-caret-down"></i>
                 </div>
-                <ul class="dropdown">
-                  <li rel="BSCPE">BS Computer Engineering</li>
-                  <li rel="BSCS">Other Programs</li>
+                <ul id="program" class="dropdown">
+                  <li rel="BSCpE">BS Computer Engineering</li>
+                  <li rel="Others">Other Programs</li>
                 </ul>
               </div>
               <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
@@ -111,22 +111,22 @@
             <p>Contact Information</p>
             <div class="form-row">
               <div class="form-holder">
-                <input type="text" placeholder="UE Email" class="form-control">
+                <input type="text" id="email" placeholder="UE Email" class="form-control">
               </div>
               <div class="form-holder">
-                <input type="text" placeholder="Personal Email" class="form-control">
+                <input type="text" id="pemail" placeholder="Personal Email" class="form-control">
               </div>
             </div>
             <div class="form-row">
               <div class="form-holder">
-                <input type="text" placeholder="Contact Number" class="form-control">
+                <input type="text" if="number" placeholder="Contact Number" class="form-control">
               </div>
               <div class="form-holder">
-                <input type="text" placeholder="Home Address" class="form-control">
+                <input type="text" id="address" placeholder="Home Address" class="form-control">
               </div>
             </div>
             <div class="form-holder">
-              <input type="text" placeholder="Provincial Address (Optional)" class="form-control">
+              <input type="text" id="paddress" placeholder="Provincial Address (Optional)" class="form-control">
             </div>
       </section>
 
@@ -144,15 +144,15 @@
             <p>Social Media Accounts</p>
             <div class="form-row">
               <div class="form-holder">
-                <input type="text" placeholder="Facebook Username" class="form-control">
+                <input type="text" id="fb" placeholder="Facebook Username" class="form-control">
               </div>
               <div class="form-holder">
-                <input type="text" placeholder="Instagram Username" class="form-control">
+                <input type="text" id="insta" placeholder="Instagram Username" class="form-control">
               </div>
             </div>
             <div class="form-row">
               <div class="form-holder"><br>
-                <input type="text" placeholder="Twitter Username" class="form-control">
+                <input type="text" id="twitter" placeholder="Twitter Username" class="form-control">
               </div>
             </div>
           </div>
@@ -177,20 +177,29 @@
                   onkeyup="Validation_UEemail()">
               </div>
               <div class="form-holder">
-                <input type="text" placeholder="Relationship" class="form-control">
+                <input type="text" id="relationship" placeholder="Relationship" class="form-control">
               </div>
             </div>
+            
+              <div class="form-holder">
+                <input type="text" id="enumber" placeholder="Contact Number" class="form-control">
+              </div>
+            <br>
             <div class="form-row">
               <div class="form-holder">
-                <input type="text" placeholder="Contact Number" class="form-control">
+                <input type="text" id="eaddress" placeholder="Home Address" class="form-control">
               </div>
               <div class="form-holder">
-                <input type="text" placeholder="Home Address" class="form-control">
+                <br>
+                  <label class="checkbox-square mt-24">
+                    <input type="checkbox" id="samehome" checked>Same as personal address
+                    <span class="checkmark"></span>
+                  </label>
+                
               </div>
             </div>
-            <div class="form-holder">
-              <input type="text" placeholder="Provincial Address (Optional)" class="form-control">
-            </div>
+            
+            
           </div>
         </div>
       </section>
@@ -236,12 +245,12 @@
                     <b> Proof of Payment: </b>
                   </div>
                   <br>
-                  <input type="file" name="Type" value="3rd">
+                  <input type="file" id="proof" name="Type" value="3rd">
                   <span class="checkmark"></span>
                 </label>
                 <div class="conditions">
                   <label class="checkbox-circle mt-24">
-                    <input type="checkbox" checked>I accept <a href="#">terms & conditions</a>
+                    <input type="checkbox" id="accept">I accept <a href="#">terms & conditions</a>
                     <span class="checkmark"></span>
                   </label>
                 </div>

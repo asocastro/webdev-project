@@ -254,7 +254,7 @@ p {
     width: 100%;
     background: #fff;
     z-index: 9;
-    border: 1px solid #81acee
+    border: 1px solid #81adee00
 }
 
 .select .dropdown li {
@@ -262,7 +262,7 @@ p {
 }
 
 .select .dropdown li:hover {
-    background: #81acee;
+    background: #81adee00;
     color: #fff
 }
 
