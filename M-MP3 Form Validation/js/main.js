@@ -8,7 +8,7 @@ $(function () {
         labels: {
              finish: "Submit", 
              next: "   Next", 
-             previous: "Back" 
+             previous: "Previous" 
             } 
         }); 
     $('.wizard > .steps li a').click(function () {
@@ -57,3 +57,5 @@ var samehome = document.getElementById("samehome").value;
 var membership_type = document.getElementById("Membership_type").value;
 var proof = document.getElementById("proof").value;
 var accept = document.getElementById("accept").value;
+
+
