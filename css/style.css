@@ -121,7 +121,7 @@ img {
     content: "";
     width: 0;
     height: 2px;
-    background: #453e79;
+    background: #194c7f;
     position: absolute;
     left: -68px;
     top: 5px;
@@ -129,11 +129,11 @@ img {
 }
 
 .wizard>.steps li.first a {
-    background: #453e79
+    background: #194c7f
 }
 
 .wizard>.steps li.checked a {
-    background: #453e79
+    background: #194c7f
 }
 
 .wizard>.steps li.checked a:after {
@@ -186,7 +186,7 @@ img {
 h3 {
     font-family: muli-semibold;
     font-size: 22px;
-    color: #453e79;
+    color: #194c7f;
     text-transform: uppercase;
     letter-spacing: 7px;
     padding: 5px 15px;
@@ -198,7 +198,7 @@ h3 {
 p {
     font-family: muli-semibold;
     font-size: 20px;
-    color: #453e79;
+    color: #194c7f;
     text-align: center;
     margin-bottom: 26px
 }
@@ -378,12 +378,12 @@ textarea.form-control {
 
 .actions li:last-child a {
     width: 124px;
-    background: #453e79;
+    background: #194c7f;
     color: #fff
 }
 
 .actions li:last-child a:hover {
-    background: #453e79
+    background: #194c7f
 }
 
 .actions li:last-child a:before {
@@ -400,12 +400,12 @@ textarea.form-control {
 }
 
 .actions li[aria-disabled=false]~li a {
-    background: #453e79;
+    background: #194c7f;
     color: #fff
 }
 
 .actions li[aria-disabled=false]~li a:hover {
-    background: #453e79
+    background: #194c7f
 }
 
 .checkbox-tick label {
@@ -474,11 +474,11 @@ textarea.form-control {
 }
 
 .checkbox-circle label a {
-    color: #4979fb
+    color: #194c7f
 }
 
 .checkbox-circle label a:hover {
-    color: #3479ba
+    color: #194c7f
 }
 
 .checkbox-circle input {
