@@ -250,7 +250,7 @@ p {
 .select .dropdown {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 20px;
     width: 100%;
     background: #fff;
     z-index: 9;

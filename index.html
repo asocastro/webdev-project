@@ -17,7 +17,7 @@
 
 <body>
   <div class="wrapper">
-    <form action="#" id="wizard">
+    <form action="#" id="wizard" name="myForm">
 
       <h2></h2>
       <!--TAB1-->
@@ -54,13 +54,13 @@
             <div class="form-row">
               <div class="select">
                 <div class="form-holder">
-                  <div class="select-control">Program</div>
+                  <div id="program" class="select-control">Program</div>
                   <i class="zmdi zmdi-caret-down"></i>
                 </div>
-                <ul id="program" class="dropdown">
-                  <li rel="BSCpE">BS Computer Engineering</li>
-                  <li rel="Others">Other Programs</li>
-                </ul>
+                <ol class="dropdown">
+                  <li rel="BSCpE" value="CPE">BS Computer Engineering</li>
+                  <li rel="Others" value="ETC">Other Programs</li>
+                </ol>
               </div>
               <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
                 <div class="checkbox-tick">
@@ -68,19 +68,19 @@
                   <br>
                   <br>
                   <label style="margin-left: 15px ;" class="Year">
-                    <input type="radio" name="Year" value="1st" checked> 1<br>
+                    <input type="radio" id="yr1" name="Year" value="1">1<br>
                     <span class="checkmark"></span>
                   </label>
                   <label class="Year">
-                    <input type="radio" name="Year" value="2nd"> 2<br>
+                    <input type="radio" id="yr2" name="Year" value="2">2<br>
                     <span class="checkmark"></span>
                   </label>
                   <label class="Year">
-                    <input type="radio" name="Year" value="3rd"> 3<br>
+                    <input type="radio" id="yr3" name="Year" value="3">3<br>
                     <span class="checkmark"></span>
                   </label>
                   <label class="Year">
-                    <input type="radio" name="Year" value="4th"> 4<br>
+                    <input type="radio" id="yr4" name="Year" value="4">4<br>
                     <span class="checkmark"></span>
                   </label>
                 </div>
@@ -118,15 +118,26 @@
               </div>
             </div>
             <div class="form-row">
-              <div class="form-holder">
-                <input type="text" id="number" placeholder="Contact Number" class="form-control">
-              </div>
+
               <div class="form-holder">
                 <input type="text" id="address" placeholder="Home Address" class="form-control">
               </div>
+              <div class="form-holder">
+                <input type="text" id="number" placeholder="Contact Number" class="form-control">
+              </div>
             </div>
-            <div class="form-holder">
-              <input type="text" id="paddress" placeholder="Provincial Address (Optional)" class="form-control">
+            <div class="form-row">
+              <div class="form-holder">
+                <input type="text" id="paddress" placeholder="Provincial Address (Optional)" class="form-control">
+              </div>
+              <div class="form-holder">
+                <br>
+                <label class="checkbox-square mt-24">
+                  <input type="checkbox" id="samehome" checked>Same as personal address
+                  <span class="checkmark"></span>
+                </label>
+
+              </div>
             </div>
       </section>
 
@@ -180,10 +191,10 @@
                 <input type="text" id="relationship" placeholder="Relationship" class="form-control">
               </div>
             </div>
-            
-              <div class="form-holder">
-                <input type="text" id="enumber" placeholder="Contact Number" class="form-control">
-              </div>
+
+            <div class="form-holder">
+              <input type="text" id="enumber" placeholder="Contact Number" class="form-control">
+            </div>
             <br>
             <div class="form-row">
               <div class="form-holder">
@@ -191,15 +202,15 @@
               </div>
               <div class="form-holder">
                 <br>
-                  <label class="checkbox-square mt-24">
-                    <input type="checkbox" id="samehome" checked>Same as personal address
-                    <span class="checkmark"></span>
-                  </label>
-                
+                <label class="checkbox-square mt-24">
+                  <input type="checkbox" id="samehome" checked>Same as personal address
+                  <span class="checkmark"></span>
+                </label>
+
               </div>
             </div>
-            
-            
+
+
           </div>
         </div>
       </section>
@@ -224,17 +235,17 @@
                   <br>
                   <div class="type2">
                     <label class="Type">
-                      <input type="radio" name="Type" value="1st" checked> <b> New </b> <br>
+                      <input type="radio" id ="n" name="Type" value="1st"> <b> New </b> <br>
                       <span class="checkmark"></span>
                     </label>
 
                     <label class="Type">
-                      <input type="radio" name="Type" value="2nd"> <b> Renewal </b> <br>
+                      <input type="radio" id="r" name="Type" value="2nd"> <b> Renewal </b> <br>
                       <span class="checkmark"></span>
                     </label>
 
                     <label class="Type">
-                      <input type="radio" name="Type" value="3rd"><b> Honorary </b> <br>
+                      <input type="radio" id="h" name="Type" value="3rd"><b> Honorary </b> <br>
                       <span class=" checkmark"></span>
                     </label>
                   </div>
@@ -250,7 +261,9 @@
                 </label>
                 <div class="conditions">
                   <label class="checkbox-circle mt-24">
-                    <input type="checkbox" id="accept">I accept <a href="https://www.termsfeed.com/live/91c2bbd9-4475-46f4-8bc1-b62fb62cd075" target="_blank">terms & conditions</a>
+                    <input type="checkbox" id="accept">I accept <a
+                      href="https://www.termsfeed.com/live/91c2bbd9-4475-46f4-8bc1-b62fb62cd075" target="_blank">terms &
+                      conditions</a>
                     <span class="checkmark"></span>
                   </label>
                 </div>
