@@ -16,13 +16,15 @@ $(function () {
              $(this).parent().prevAll().addClass('checked'); 
              $(this).parent().nextAll().removeClass('checked'); 
             }); 
-    $('.forward').click(function () {
+    $('.Next').click(function () {
          $("#wizard").steps('next'); 
     })
-    $('.backward').click(function () { $("#wizard").steps('previous'); })
+    $('.Previous').click(function () { $("#wizard").steps('Previous'); })
     $('html').click(function () { $('.select .dropdown').hide(); }); $('.select').click(function (event) { event.stopPropagation(); }); $('.select .select-control').click(function () { $(this).parent().next().toggle(); })
     $('.select .dropdown li').click(function () { $(this).parent().toggle(); var text = $(this).attr('rel'); $(this).parent().prev().find('div').text(text); })
-
+    $('wz_finish').click(function(){
+        alert("test");
+    })
 })
 
 
